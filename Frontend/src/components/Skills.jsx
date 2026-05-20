@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/home.css';
+import '../styles/index.css';
 
 function Skills() {
     return (
@@ -11,7 +11,7 @@ function Skills() {
                         <h3>Programming & Markup Languages</h3>
                         <p>C++, C#, Java, Python, SQL, PHP, JavaScript, HTML, CSS, ReactJS</p>
                     </div>
-                    
+
                     <div className="skill-category">
                         <h3>Database Management</h3>
                         <p>MySQL, PostgreSQL</p>

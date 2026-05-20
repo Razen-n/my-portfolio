@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import profilePic from '../assets/profile.png';
-import '../styles/home.css';
+import '../styles/index.css';
 import Skills from '../components/Skills';
 import Experience from '../components/Experience';
 import Projects from '../components/Projects';
-function Home() {
+import Contact from '../components/Contact';
+function Index() {
+    const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
     return (
         <main>
             <section className="hero-section">
@@ -22,7 +25,7 @@ function Home() {
 
                         <div className="hero-buttons">
                             <a href="#projects" className="btn btn-primary">View My Work</a>
-                            <a href="#contact" className="btn btn-secondary">Contact Me</a>
+                            <a href="#!" onClick={(e) => { e.preventDefault(); setIsContactModalOpen(true); }} className="btn btn-secondary">Contact Me</a>
                         </div>
                     </div>
 
@@ -37,8 +40,9 @@ function Home() {
             <Skills />
             <Experience />
             <Projects />
+            <Contact isOpen={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} />
         </main>
     );
 }
 
-export default Home;
+export default Index;
