@@ -18,6 +18,11 @@ function Skills() {
                     </div>
 
                     <div className="skill-category">
+                        <h3>QA & Testing</h3>
+                        <p> Manual Functional Testing, Bug Identification & Tracking, Test Logic Validation, Writing Test Cases</p>
+                    </div>
+
+                    <div className="skill-category">
                         <h3>Version Control & Tools</h3>
                         <p>GitHub, Visual Studio, Visual Studio Code, Antigravity</p>
                     </div>

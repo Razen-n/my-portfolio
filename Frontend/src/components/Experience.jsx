@@ -30,7 +30,7 @@ function Experience() {
                             <h4>Bachelor of Science in Information Technology - Software Engineering</h4>
                             <p className="timeline-org">Trinity University of Asia, Quezon City</p>
                             <p className="timeline-date">2022 - 2026</p>
-                            {/*<p className="honors">Magna Cum Laude</p>*/}
+                            <p className="honors">Magna Cum Laude</p>
                         </div>
                     </div>
                 </div>
