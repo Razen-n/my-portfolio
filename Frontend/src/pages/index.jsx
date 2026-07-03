@@ -1,15 +1,32 @@
-import React, { useState } from 'react';
-import profilePic from '../assets/profile.png';
+import React, { useState, useEffect } from 'react';
+import profilePic from '../assets/profile2.png';
 import '../styles/index.css';
 import Skills from '../components/Skills';
 import Experience from '../components/Experience';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
+import ThemeToggle from '../components/ThemeToggle';
+
 function Index() {
     const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+    const [theme, setTheme] = useState(() => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) return savedTheme;
+        return 'dark'; // default to dark mode
+    });
+
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    }, [theme]);
+
+    const toggleTheme = () => {
+        setTheme(prevTheme => (prevTheme === 'dark' ? 'light' : 'dark'));
+    };
 
     return (
         <main>
+            <ThemeToggle theme={theme} onToggle={toggleTheme} />
             <section className="hero-section">
                 <div className="hero-container">
 
@@ -30,7 +47,9 @@ function Index() {
                     </div>
 
                     <div className="hero-image-container">
-                        <img src={profilePic} alt="Patrick Gabriel M. Velasquez" className="hero-profile-img" />
+                        <div className="hero-profile-img-wrapper">
+                            <img src={profilePic} alt="Patrick Gabriel M. Velasquez" className="hero-profile-img" />
+                        </div>
                         <div className="img-glow-effect"></div>
                     </div>
 

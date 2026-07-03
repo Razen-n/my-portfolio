@@ -10,7 +10,7 @@ function Experience() {
                 <div className="timeline-container">
                     {/* WORK EXPERIENCE */}
                     <div className="timeline-box">
-                        <h3>Work Experience</h3>
+                        <h3>Professional Experience</h3>
                         <div className="timeline-item">
                             <h4>Web Developer Intern</h4>
                             <p className="timeline-org">International Academy Manila</p>
