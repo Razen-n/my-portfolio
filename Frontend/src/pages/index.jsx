@@ -31,7 +31,7 @@ function Index() {
                 <div className="hero-container">
 
                     <div className="hero-text">
-                        <span className="badge">Software Engineer | Web Developer | Manual QA Tester</span>
+                        <span className="badge">Software Engineer | Web Developer | Tester</span>
                         <h1>
                             Hi, I'm <span className="highlight">Patrick Gabriel Velasquez</span>
                         </h1>

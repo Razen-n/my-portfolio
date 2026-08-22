@@ -9,7 +9,7 @@ function Skills() {
                 <div className="skills-container">
                     <div className="skill-category">
                         <h3>Programming & Markup Languages</h3>
-                        <p>C++, C#, Java, Python, SQL, PHP, JavaScript, HTML, CSS, ReactJS</p>
+                        <p>Java, SQL, PHP, JavaScript, HTML, CSS, ReactJS</p>
                     </div>
 
                     <div className="skill-category">
@@ -19,7 +19,7 @@ function Skills() {
 
                     <div className="skill-category">
                         <h3>QA & Testing</h3>
-                        <p> Manual Functional Testing, Bug Identification & Tracking, Test Logic Validation, Writing Test Cases</p>
+                        <p> Functional Testing, Bug Identification & Tracking, Test Logic Validation</p>
                     </div>
 
                     <div className="skill-category">
