@@ -1,41 +1,60 @@
 import React from 'react';
 import '../styles/index.css';
 
+const skillCategories = [
+    {
+        icon: '💻',
+        title: 'Programming & Markup',
+        skills: ['Java', 'PHP', 'Laravel', 'JavaScript', 'HTML5', 'CSS3', 'ReactJS', 'SQL'],
+    },
+    {
+        icon: '🗄️',
+        title: 'Database Management',
+        skills: ['MySQL', 'PostgreSQL'],
+    },
+    {
+        icon: '🧪',
+        title: 'Testing',
+        skills: ['Functional Testing', 'Bug Identification & Tracking', 'Error Logging'],
+    },
+    {
+        icon: '🔧',
+        title: 'Version Control & Tools',
+        skills: ['Git', 'GitHub', 'Visual Studio Code', 'Visual Studio', 'Sublime Text'],
+    },
+    {
+        icon: '🎨',
+        title: 'UI/UX & Design',
+        skills: ['Figma', 'Canva'],
+    },
+    {
+        icon: '☁️',
+        title: 'Cloud Services',
+        skills: ['DigitalOcean'],
+    },
+];
+
 function Skills() {
     return (
         <section id="skills" className="skills-section">
             <div className="section-container">
-                <h2 className="section-title">My Skills</h2>
+                <h2 className="section-title">
+                    My <span className="section-title-accent">Skills</span>
+                </h2>
+                <p className="section-subtitle">Technologies and tools I work with</p>
+
                 <div className="skills-container">
-                    <div className="skill-category">
-                        <h3>Programming & Markup Languages</h3>
-                        <p>Java, SQL, PHP, JavaScript, HTML, CSS, ReactJS</p>
-                    </div>
-
-                    <div className="skill-category">
-                        <h3>Database Management</h3>
-                        <p>MySQL, PostgreSQL</p>
-                    </div>
-
-                    <div className="skill-category">
-                        <h3>QA & Testing</h3>
-                        <p> Functional Testing, Bug Identification & Tracking, Test Logic Validation</p>
-                    </div>
-
-                    <div className="skill-category">
-                        <h3>Version Control & Tools</h3>
-                        <p>GitHub, Visual Studio, Visual Studio Code, Antigravity</p>
-                    </div>
-
-                    <div className="skill-category">
-                        <h3>UI/UX & Design Tools</h3>
-                        <p>Figma, Canva</p>
-                    </div>
-
-                    <div className="skill-category">
-                        <h3>Cloud Services</h3>
-                        <p>Digital Ocean</p>
-                    </div>
+                    {skillCategories.map((category) => (
+                        <div className="skill-category" key={category.title}>
+                            <span className="skill-category-icon">{category.icon}</span>
+                            <h3>{category.title}</h3>
+                            <div className="skill-tags">
+                                {category.skills.map((skill) => (
+                                    <span className="skill-tag" key={skill}>{skill}</span>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>
